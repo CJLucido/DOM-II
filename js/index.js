@@ -77,7 +77,7 @@ document.querySelector('body').onpointerdown = (e) => {
 }
 
 
-////////////EDITABLE TEXT NOT WORKING ON CUT EVENT!!!!!!!!!!!!
+////////////CUT EVENT (REVERSE IMPOSSIBLE????)//////
 
 const cuttee = document.querySelector(".source");
 
@@ -86,6 +86,17 @@ cuttee.addEventListener('cut', (e) => {
     e.clipboardData.setData('text/plain', selection.toString().toUpperCase());
     selection.deleteFromDocument();
     e.preventDefault();
+})
+
+
+//////// TEN: RESIZE////
+
+const footee = document.querySelector('.footer p');
+console.log(footee)
+
+window.addEventListener("resize", () =>{
+    
+    footee.style.fontSize = "10rem";
 })
 
 
