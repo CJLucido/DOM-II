@@ -30,7 +30,7 @@ navie.forEach(element => {
 
 
 
-//////////////////AFFECT LOGO-HEADING: KEYDOWN///////
+//////////////////AFFECT LOGO-HEADING: KEYDOWN and KEYUP///////
 
 /// NOT WORKING!!!!!
 
@@ -44,6 +44,13 @@ window.addEventListener(
         logoBus.style.fontSize = "5rem";
         logoBus.style.background = "black"
     });
+
+window.addEventListener(
+        'keyup', () => {
+            logoBus.style.color = "purple";
+            logoBus.style.fontSize = "1.5rem";
+            logoBus.style.background = "green"
+        });
 
 
 ////////////////AFFECT FIRST CONTENT IMG: WHEEL//////////////
