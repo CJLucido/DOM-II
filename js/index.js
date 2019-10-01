@@ -77,6 +77,16 @@ document.querySelector('body').onpointerdown = (e) => {
 }
 
 
+////////////EDITABLE TEXT NOT WORKING ON CUT EVENT!!!!!!!!!!!!
+
+const cuttee = document.querySelector(".source");
+
+cuttee.addEventListener('cut', (e) => {
+    const selection = document.getSelection();
+    e.clipboardData.setData('text/plain', selection.toString().toUpperCase());
+    selection.deleteFromDocument();
+    e.preventDefault();
+})
 
 
 
