@@ -36,11 +36,11 @@ const logoBus = document.querySelector('.logo-heading')
 console.log(logoBus)
 
 
-logoBus.addEventListener(
-    'keydown', (e) => {
-        e.target.style.color = "yellow";
-        e.target.style.fontSize = "5rem";
-        e.target.style.background = "black"
+window.addEventListener(
+    'keydown', () => {
+        logoBus.style.color = "yellow";
+        logoBus.style.fontSize = "5rem";
+        logoBus.style.background = "black"
     });
 
 
