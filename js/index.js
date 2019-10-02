@@ -60,6 +60,8 @@ console.log(firstImg);
 
 firstImg.addEventListener("wheel", () =>{
     firstImg.style.transform = "translateX(100px)";
+
+ 
 })
 
 ////////////////AFFECT SECOND CONTENT IMG: SCROLL//////////////
@@ -70,11 +72,6 @@ console.log(secondImg);
 window.addEventListener("scroll", () =>{
     secondImg.style.transform = "translateY(-500px)";
 })
-
-////////////////BODY ART: ONPOINTERDOWN///////////
-document.querySelector('body').onpointerdown = (e) => {
-        e.target.style.backgroundColor = "red";
-}
 
 
 ////////////CUT EVENT (REVERSE IMPOSSIBLE????)//////
@@ -99,7 +96,35 @@ window.addEventListener("resize", () =>{
     footee.style.fontSize = "10rem";
 })
 
+//////second wheel to show propagation///
 
+// document.querySelector('body').onwheel = (e) => {
+//     e.target.style.color = "blue";
+// }
+
+///wheel didn't work unless directly over text
+
+// document.querySelector('body').ondblclick = (e) => {
+//     e.target.style.backgroundColor = "blue";
+// }
+
+
+
+footee.onpointerdown = (e) => {
+    e.target.style.backgroundColor = "blue";
+
+    //click bubbles to here from onpointerdown
+    footee.stopPropagation();
+}
+
+
+////////////////BODY ART: ONPOINTERDOWN///////////
+
+const bodyCl = document.querySelector('body');
+bodyCl.onpointerdown = (e) => {
+        e.target.style.backgroundColor = "red";
+
+}
 
 
 ////////////////ISLAND GETS AWAY//////////
